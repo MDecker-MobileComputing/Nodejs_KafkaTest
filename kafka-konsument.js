@@ -11,9 +11,11 @@ if (!process.env.KAFKA_TOPIC) {
 
 
 // write message to Kafka topic
-const { Kafka } = require("kafkajs");
+const { Kafka, logLevel } = require("kafkajs");
 
-const kafka = new Kafka({ brokers: [ "localhost:9092" ], clientId: "nodejs-kafka-sender" });
+const kafka = new Kafka({ brokers: [ "localhost:9092" ],
+                          clientId: "nodejs-kafka-sender",
+                          logLevel: logLevel.ERROR });
 
 const konsument = kafka.consumer({ groupId: "test-gruppe" });
 

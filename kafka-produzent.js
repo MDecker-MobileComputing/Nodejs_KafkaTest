@@ -13,9 +13,12 @@ console.log("Versuche, Nachricht auf das folgende Kafka-Topic zu schreiben: " + 
 
 
 // write message to Kafka topic
-const { Kafka } = require("kafkajs");
+const { Kafka, logLevel  } = require("kafkajs");
 
-const kafka = new Kafka({ brokers: [ "localhost:9092" ], clientId: "nodejs-kafka-sender" });
+const kafka = new Kafka({ brokers: [ "localhost:9092" ],
+                          clientId: "nodejs-kafka-sender",
+                          logLevel: logLevel.ERROR
+                        });
 
 const producer = kafka.producer();
 
