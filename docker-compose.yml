@@ -1,4 +1,4 @@
-# Vorlage für Kafka im KRAFT-Modus (ohne ZooKeeper): 
+# Vorlage für Kafka im KRAFT-Modus (ohne ZooKeeper):
 # https://medium.com/@tetianaokhotnik/setting-up-a-local-kafka-environment-in-kraft-mode-with-docker-compose-and-bitnami-image-enhanced-29a2dcabf2a9
 version: "3"
 services:
@@ -23,7 +23,7 @@ services:
       - BITNAMI_DEBUG=yes
       - KAFKA_CFG_NUM_PARTITIONS=1
 
-# Kafkacat-Befehle, wenn dieser Kafka-Server verwendet wird:
+# Kafkacat-Befehle, wenn dieser Kafka-Server lokal verwendet wird:
 #
 #   Alle Topics ausgeben: kafkacat -L -b localhost:9092
 #
