@@ -15,3 +15,8 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+# Kafkacat-Befehle, wenn dieser Kafka-Server verwendet wird:
+#   Alle Topics ausgeben: kafkacat -L -b localhost:9092
+#   Alle Nachrichten von Topic anzeigen: kafkacat -C -b localhost:9092 -t MeinTopic
+#   Nachricht auf Topic schreiben (ENTER nach Zeile): kafkacat -P -b localhost:9092 -t MeinTopic
