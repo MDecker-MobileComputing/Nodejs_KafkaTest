@@ -1,5 +1,2 @@
 
-# Konfigurationsdatei, u.a. mit Passwort für Kafka-Verbindung
-.env
-
 node_modules/

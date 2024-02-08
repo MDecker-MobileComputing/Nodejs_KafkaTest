@@ -1,24 +1,26 @@
 
-// Konfigurationsdatei ".env" laden
-require("dotenv").config();
-
-
-if (!process.env.KAFKA_TOPIC) {
-
-    console.error("Kafka-Topic nicht konfiguriert. Bitte Datei '.env' prüfen.");
-    process.exit(1);
-}
-
-console.log("Versuche, Nachricht auf das folgende Kafka-Topic zu schreiben: " + process.env.KAFKA_TOPIC);
-
-
-// write message to Kafka topic
 const { Kafka, logLevel  } = require("kafkajs");
 
 const kafka = new Kafka({ brokers: [ "localhost:9092" ],
                           clientId: "nodejs-kafka-sender",
                           logLevel: logLevel.ERROR
                         });
+
+/*
+const kafka = new Kafka({
+    clientId: 'nodejs-kafka-sender',
+    brokers: ['zimolong.eu:9092'],
+    sasl: {
+        mechanism: 'plain',
+        username: 'alice',
+        password: 's3cr3t'
+    },
+    ssl: false, // Disabling SSL as you're using SASL_PLAINTEXT
+    connectionTimeout: 1000,
+    authenticationTimeout: 1000,
+    logLevel: logLevel.ERROR,
+});
+*/
 
 const producer = kafka.producer();
 
@@ -27,12 +29,11 @@ const asyncBlock = async () => {
 
     await producer.connect();
     await producer.send({
-                    topic: process.env.KAFKA_TOPIC,
-                    messages: [{ value: "Hallo KafkaJS!" }]
+                    topic: "Dozent.Mustermann.KafkaJsTestTopic",
+                    messages: [{ value: "Diese Nachricht wurde mit Kafkajs erzeugt am/um " + new Date().toISOString() }]
     });
 
     console.log("Nachricht wurde erfolgreich gesendet.");
-
 };
 
 asyncBlock().catch(console.error);
