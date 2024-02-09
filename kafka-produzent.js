@@ -35,6 +35,7 @@ const asyncBlock = async () => {
     });
 
     console.log("Die folgende Nachricht wurde gesendet: " + nachricht);
+    await producer.disconnect();
 };
 
 asyncBlock().catch(console.error);
