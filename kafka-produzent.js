@@ -5,7 +5,6 @@ const kafka = new Kafka({ brokers: [ "localhost:9092" ],
                           clientId: "nodejs-kafka-sender",
                           logLevel: logLevel.ERROR
                         });
-
 /*
 const kafka = new Kafka({
     clientId: 'nodejs-kafka-sender',
@@ -22,18 +21,20 @@ const kafka = new Kafka({
 });
 */
 
+
 const producer = kafka.producer();
 
+const nachricht = "Diese Nachricht wurde mit Kafkajs erzeugt am/um " + (new Date()).toISOString();
 
 const asyncBlock = async () => {
 
     await producer.connect();
     await producer.send({
                     topic: "Dozent.Mustermann.KafkaJsTestTopic",
-                    messages: [{ value: "Diese Nachricht wurde mit Kafkajs erzeugt am/um " + new Date().toISOString() }]
+                    messages: [{ value: nachricht }]
     });
 
-    console.log("Nachricht wurde erfolgreich gesendet.");
+    console.log("Die folgende Nachricht wurde gesendet: " + nachricht);
 };
 
 asyncBlock().catch(console.error);

@@ -3,7 +3,8 @@ const { Kafka, logLevel } = require("kafkajs");
 
 const kafka = new Kafka({ brokers: [ "localhost:9092" ],
                           clientId: "nodejs-kafka-sender",
-                          logLevel: logLevel.ERROR });
+                          logLevel: logLevel.ERROR
+                        });
 /*
 const kafka = new Kafka({
     clientId: 'nodejs-kafka-sender',
@@ -28,7 +29,9 @@ const asyncBlock = async () => {
     await konsument.subscribe({ topic: "Dozent.Mustermann.KafkaJsTestTopic", fromBeginning: true });
 
     await konsument.run({
+
         eachMessage: async ({ topic, partition, message }) => {
+
           console.log( `Nachricht empfangen: ${message.value.toString()}` );
         },
     });
