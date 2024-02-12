@@ -1,10 +1,12 @@
 
 const { Kafka, logLevel  } = require("kafkajs");
 
+
 const kafka = new Kafka({ brokers: [ "localhost:9092" ],
                           clientId: "nodejs-kafka-sender",
                           logLevel: logLevel.ERROR
                         });
+
 /*
 const kafka = new Kafka({
     clientId: 'nodejs-kafka-sender',
@@ -12,7 +14,7 @@ const kafka = new Kafka({
     sasl: {
         mechanism: 'plain',
         username: 'alice',
-        password: 's3cr3t'
+        password: 'g3h3im'
     },
     ssl: false, // Disabling SSL as you're using SASL_PLAINTEXT
     connectionTimeout: 1000,
@@ -34,7 +36,7 @@ const asyncBlock = async () => {
                     messages: [{ value: nachricht }]
     });
 
-    console.log("Die folgende Nachricht wurde gesendet: " + nachricht);
+    console.log("\nDie folgende Nachricht wurde gesendet: " + nachricht + "\n");
     await producer.disconnect();
 };
 
