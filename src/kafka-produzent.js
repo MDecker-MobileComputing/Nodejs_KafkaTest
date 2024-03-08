@@ -40,4 +40,4 @@ const asyncBlock = async () => {
     await producer.disconnect();
 };
 
-asyncBlock().catch(console.error);
+asyncBlock().catch( console.error );
