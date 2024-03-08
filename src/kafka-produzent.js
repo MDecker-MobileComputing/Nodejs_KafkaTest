@@ -30,10 +30,15 @@ const nachricht = "Diese Nachricht wurde mit Kafkajs erzeugt am/um " + (new Date
 
 const asyncBlock = async () => {
 
+    const nachrichtObjekt = {
+        //key: "mein-schluesselwert",
+        value: nachricht
+    };
+
     await producer.connect();
     await producer.send({
                     topic: "Dozent.Mustermann.KafkaJsTestTopic",
-                    messages: [{ value: nachricht }]
+                    messages: [ nachrichtObjekt ]
     });
 
     console.log("\nDie folgende Nachricht wurde gesendet: " + nachricht + "\n");
