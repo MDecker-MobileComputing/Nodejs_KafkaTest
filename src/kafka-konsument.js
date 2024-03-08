@@ -37,7 +37,7 @@ const asyncBlock = async () => {
         },
     });
 
-    console.log("Warte auf Nachrichten ...");
+    console.log("Warte auf Nachrichten ...\n");
 };
 
 asyncBlock().catch(console.error);
