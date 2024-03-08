@@ -26,7 +26,8 @@ const konsument = kafka.consumer({ groupId: "test-gruppe" });
 const asyncBlock = async () => {
 
     await konsument.connect();
-    await konsument.subscribe({ topic: "Dozent.Mustermann.KafkaJsTestTopic", fromBeginning: true });
+    await konsument.subscribe({ topic: "Dozent.Mustermann.KafkaJsTestTopic",
+                                fromBeginning: true });
 
     await konsument.run({
 
