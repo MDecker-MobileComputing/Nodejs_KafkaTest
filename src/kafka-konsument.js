@@ -32,7 +32,7 @@ const asyncBlock = async () => {
 
         eachMessage: async ({ topic, partition, message }) => {
 
-          console.log( `Nachricht empfangen: ${message.value.toString()}` );
+          console.log( `Nachricht empfangen: ${message.value}` );
         },
     });
 
