@@ -1,5 +1,18 @@
 {
+  "author": "MDecker-MobileComputing",
+  "license": "BSD-3-Clause",
+  "name": "nodejs_kafkatest",
+  "version": "1.0.0",
+  "description": "Demo für Schreiben und Lesen von Kafka-Nachrichten mit Node.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MDecker-MobileComputing/Nodejs_KafkaTest"
+  },
   "dependencies": {
     "kafkajs": "^2.2.4"
+  },
+  "scripts": {
+    "produzent": "node src/kafka-produzent.js",
+    "konsument": "node src/kafka-konsument.js"
   }
 }
