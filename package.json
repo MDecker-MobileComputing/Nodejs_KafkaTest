@@ -13,6 +13,7 @@
   },
   "scripts": {
     "produzent": "node src/kafka-produzent.js",
-    "konsument": "node src/kafka-konsument.js"
+    "konsument": "node src/kafka-konsument.js",
+    "liste"    : "node src/kafka-topic-liste.js"
   }
 }
