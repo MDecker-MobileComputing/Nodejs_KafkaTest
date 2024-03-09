@@ -33,7 +33,10 @@ const run = async () => {
 
     console.log(`\nAnzahl Topics gefunden: ${stringArrayOfTopics.length}\n`);
 
+    // alle Topics in alphabetischer Reihenfolge ausgeben
+    stringArrayOfTopics.sort();
     for (let topic of stringArrayOfTopics) {
+
         console.log(`Topic: ${topic}`);
     }
     console.log();
