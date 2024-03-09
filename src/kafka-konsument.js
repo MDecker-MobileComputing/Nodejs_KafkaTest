@@ -7,12 +7,12 @@ const kafka = new Kafka({ brokers: [ "localhost:9092" ],
                         });
 /*
 const kafka = new Kafka({
-    clientId: 'nodejs-kafka-sender',
-    brokers: ['zimolong.eu:9092'],
+    clientId: "nodejs-kafka-sender",
+    brokers: ["zimolong.eu:9092"],
     sasl: {
-        mechanism: 'plain',
-        username: 'alice',
-        password: 's3cr3t'
+        mechanism: "plain",
+        username: "alice",
+        password: "s3cr3t"
     },
     ssl: false, // Disabling SSL as you're using SASL_PLAINTEXT
     connectionTimeout: 1000,
