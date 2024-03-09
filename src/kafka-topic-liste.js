@@ -9,7 +9,7 @@ const kafka = new Kafka({ brokers: [ "localhost:9092" ],
 
 /*
 const kafka = new Kafka({
-    clientId: "nodejs-kafka-sender",
+    clientId: "nodejs-kafka-liste",
     brokers: ["zimolong.eu:9092"],
     sasl: {
         mechanism: "plain",

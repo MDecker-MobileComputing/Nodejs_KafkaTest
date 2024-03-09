@@ -2,12 +2,12 @@
 const { Kafka, logLevel } = require("kafkajs");
 
 const kafka = new Kafka({ brokers: [ "localhost:9092" ],
-                          clientId: "nodejs-kafka-sender",
+                          clientId: "nodejs-kafka-empfaenger",
                           logLevel: logLevel.ERROR
                         });
 /*
 const kafka = new Kafka({
-    clientId: "nodejs-kafka-sender",
+    clientId: "nodejs-kafka-empfaenger",
     brokers: ["zimolong.eu:9092"],
     sasl: {
         mechanism: "plain",
