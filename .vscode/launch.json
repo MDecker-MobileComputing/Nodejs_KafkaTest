@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Kafka-Produzent",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/src/kafka-produzent.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Kafka-Konsument",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/src/kafka-konsument.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Kafka-Topic-Liste",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/src/kafka-topic-liste.js"
+        }
+    ]
+}
