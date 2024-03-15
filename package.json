@@ -2,6 +2,7 @@
   "author": "MDecker-MobileComputing",
   "license": "BSD-3-Clause",
   "name": "nodejs_kafkatest",
+  "type": "module",
   "version": "1.0.0",
   "description": "Demo für Schreiben und Lesen von Kafka-Nachrichten mit Node.js",
   "repository": {

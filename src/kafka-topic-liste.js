@@ -1,13 +1,12 @@
-const { Kafka, logLevel } = require("kafkajs");
+import { Kafka, logLevel } from "kafkajs";
 
-
+/*
 const kafka = new Kafka({ brokers: [ "localhost:9092" ],
                           clientId: "nodejs-kafka-liste",
                           logLevel: logLevel.ERROR
                         });
+*/                        
 
-
-/*
 const kafka = new Kafka({
     clientId: "nodejs-kafka-liste",
     brokers: ["zimolong.eu:9092"],
@@ -21,7 +20,6 @@ const kafka = new Kafka({
     authenticationTimeout: 1000,
     logLevel: logLevel.ERROR,
 });
-*/
 
 
 const admin = kafka.admin();
