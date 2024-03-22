@@ -15,19 +15,18 @@ const run = async () => {
 
     await admin.createTopics({
       topics: [{
-        topic: "Dozent.MaxMustermann.CustomTopic",
+        topic: "Dozent.MaxMustermann.CustomTopic", // Darf keine Umlaute enthalten!
         numPartitions: 2,
         replicationFactor: 1,
         configEntries: [
-            { name: "retention.ms", value: "-1"} 
+            { name: "retention.ms", value: "-1"}
         ]
       }],
     });
 
     await admin.disconnect();
   }
-  
+
   run().catch( console.error );
 
 
-  

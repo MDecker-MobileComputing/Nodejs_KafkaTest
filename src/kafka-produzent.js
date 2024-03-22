@@ -5,7 +5,7 @@ const kafka = new Kafka({ brokers: [ "localhost:9092" ],
                           clientId: "nodejs-kafka-sender",
                           logLevel: logLevel.ERROR
                         });
-*/                        
+*/
 
 const kafka = new Kafka({
     clientId: "nodejs-kafka-sender",
@@ -36,7 +36,7 @@ const asyncBlock = async () => {
 
     await producer.connect();
     await producer.send({
-                    topic: "Dozent.Mustermann.KafkaJsTestTopic",
+                    topic: "Dozent.Mustermann.KafkaJsTestTopic", // Darf keine Umlaute enthalten!
                     messages: [ nachrichtObjekt ]
     });
 
