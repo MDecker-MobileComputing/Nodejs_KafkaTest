@@ -15,7 +15,7 @@ const run = async () => {
 
     await admin.createTopics({
       topics: [{
-        topic: "Dozent.MaxMustermann.CustomTopic", // Darf keine Umlaute enthalten!
+        topic: "Dozent.MaxMustermann.CustomTopic", // darf keine Umlaute enthalten!
         numPartitions: 2,
         replicationFactor: 1,
         configEntries: [
@@ -28,5 +28,3 @@ const run = async () => {
   }
 
   run().catch( console.error );
-
-
