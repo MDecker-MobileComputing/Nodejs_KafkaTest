@@ -20,6 +20,8 @@ const run = async () => {
         replicationFactor: 1,
         configEntries    : [
             { name: "retention.ms", value: "-1" }
+            //{ name: "retention.bytes", value: "104857600" } // Set retention by size to 100MB
+            //{ name: "cleanup.policy" , value: "compact"   } // Enable log compaction
         ]
       }],
     });
